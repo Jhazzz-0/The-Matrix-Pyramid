@@ -1,0 +1,5 @@
+/* Estilos simples con temática de piedra */
+QWidget { background-color: #1e1712; color: #e0d8cf; }
+QPushButton { background-color:#6b5b53; color:#f8c552; border:3px solid #463a33; padding:6px 12px; }
+QPushButton:hover { background-color:#7b6b62; }
+QLabel { color:#e0d8cf; }
