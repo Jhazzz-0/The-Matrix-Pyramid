@@ -230,10 +230,10 @@ class GameRenderer:
                 s.set_at((x + 6 * pixel_unit, y + 10 * pixel_unit), grain_color)
                 s.set_at((x + 11 * pixel_unit, y + 11 * pixel_unit), grain_color)
         
-        # 2. Dibujar trampillas (casillas peligrosas)
+        # 2. Dibujar trampillas (casillas peligrosas, ocultas como paredes)
         for trap_pos in state.traps:
             tx, ty = grid_to_px(trap_pos, self.grid_origin, self.cell)
-            self.draw_sprite(s, tx, ty, self.cell, TRAP_SPRITE, TRAP_COLORS, padding=2)
+            self.draw_sprite(s, tx, ty, self.cell, WALL_SPRITE, WALL_COLORS, padding=1)
         
         # 3. Dibujar paredes de ladrillo pixeladas
         for wall_pos in state.walls:
